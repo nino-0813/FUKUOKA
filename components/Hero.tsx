@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative h-[35vh] md:h-[50vh] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden">
       {/* Background Visual */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img 
@@ -27,18 +27,17 @@ const Hero: React.FC = () => {
           }}
           alt="Main Concept"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20"></div>
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 text-center text-white px-4 pt-12 md:pt-16">
-        <h1 className="serif-title text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.2] mb-2 md:mb-10 tracking-[0.15em] animate-fade-in-up delay-200 opacity-0 relative text-white" style={{ 
+      <div className="relative z-10 text-center text-white px-4 pt-20 md:pt-16">
+        <h1 className="serif-title text-3xl md:text-6xl lg:text-7xl font-bold leading-[1.2] mb-2 md:mb-10 tracking-[0.15em] animate-fade-in-up delay-200 opacity-0 relative text-white" style={{ 
           textShadow: '0 0 20px rgba(255,255,255,0.3), 0 4px 30px rgba(0,0,0,0.5), 0 8px 60px rgba(0,0,0,0.4), 0 2px 10px rgba(0,0,0,0.6)',
           filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.4))',
           letterSpacing: '0.15em'
         }}>
           <span className="relative inline-block">
-            <span className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-transparent blur-sm"></span>
             美しさは、<br />
             削り出せる。
             <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent"></span>

@@ -12,13 +12,13 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-700 ${scrolled ? 'bg-white/90 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-8'}`}>
-      <div className="container mx-auto px-8 flex justify-start lg:justify-between items-center">
+    <nav className={`fixed top-0 left-0 w-full z-[100] transition-all duration-700 ${scrolled ? 'bg-white/90 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-4 md:py-8'}`}>
+      <div className="container mx-auto px-4 md:px-8 flex justify-start lg:justify-between items-center">
         <div className="flex flex-col">
-          <span className="text-[8px] md:text-[10px] tracking-[0.4em] font-black uppercase opacity-60" style={{ color: scrolled ? COLORS.text : 'white' }}>
+          <span className="text-[7px] md:text-[10px] tracking-[0.4em] font-black uppercase opacity-50 md:opacity-60" style={{ color: scrolled ? COLORS.text : 'white' }}>
             Premium Atelier
           </span>
-          <h1 className="text-xs md:text-lg font-black tracking-tighter" style={{ color: scrolled ? COLORS.primary : 'white' }}>
+          <h1 className="text-[10px] md:text-lg font-black tracking-tighter leading-tight" style={{ color: scrolled ? COLORS.primary : 'white' }}>
             二の腕痩せ専門ジプソフィル®︎<span className="font-light opacity-50 ml-1">FUKUOKA</span>
           </h1>
         </div>
