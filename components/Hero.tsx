@@ -9,24 +9,32 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img 
           src="/images/Generated Image January 15, 2026 - 10_58AM.jpeg" 
-          className="w-full h-full object-cover object-center brightness-95"
-          style={{ objectPosition: 'center 30%' }}
+          className="w-full h-full object-cover object-center brightness-95 scale-110"
+          style={{ objectPosition: 'center top' }}
           alt="Main Concept"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20"></div>
       </div>
 
       {/* Hero Content */}
       <div className="relative z-10 text-center text-white px-4 pt-16 md:pt-24">
-        <h1 className="serif-title text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-10 tracking-wider animate-fade-in-up delay-200 opacity-0 drop-shadow-lg">
-          美しさは、<br />
-          削り出せる。
+        <h1 className="serif-title text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.2] mb-10 tracking-[0.15em] animate-fade-in-up delay-200 opacity-0 relative text-white" style={{ 
+          textShadow: '0 0 20px rgba(255,255,255,0.3), 0 4px 30px rgba(0,0,0,0.5), 0 8px 60px rgba(0,0,0,0.4), 0 2px 10px rgba(0,0,0,0.6)',
+          filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.4))',
+          letterSpacing: '0.15em'
+        }}>
+          <span className="relative inline-block">
+            <span className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-transparent blur-sm"></span>
+            美しさは、<br />
+            削り出せる。
+            <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-24 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent"></span>
+          </span>
         </h1>
         <div className="flex flex-col items-center animate-fade-in-up delay-500 opacity-0">
           <div className="w-px h-24 bg-gradient-to-b from-white via-white/50 to-transparent mb-8"></div>
           <p className="text-sm md:text-base tracking-[0.2em] font-light leading-loose font-english opacity-90">
             隠すための服選びを、今日で卒業する。<br />
-            福岡天神で出逢う、新しいあなたの輪郭。
+            ジプソフィルで出逢う、新しいあなたの輪郭。
           </p>
         </div>
       </div>

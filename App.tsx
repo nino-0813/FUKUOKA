@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import BrandStory from './components/BrandStory';
@@ -12,9 +12,42 @@ import { COLORS } from './constants';
 
 const App: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
+  const storyRef = useRef<HTMLElement>(null);
+  const methodRef = useRef<HTMLElement>(null);
+  const experienceRef = useRef<HTMLElement>(null);
+  const archivesRef = useRef<HTMLElement>(null);
+  const ctaRef = useRef<HTMLElement>(null);
+  const footerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     setIsLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+    const refs = [storyRef, methodRef, experienceRef, archivesRef, ctaRef, footerRef];
+
+    refs.forEach((ref) => {
+      if (!ref.current) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        },
+        { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+      );
+
+      observer.observe(ref.current);
+      observers.push(observer);
+    });
+
+    return () => {
+      observers.forEach((observer) => observer.disconnect());
+    };
   }, []);
 
   return (
@@ -27,28 +60,47 @@ const App: React.FC = () => {
       <main>
         <Hero />
         
-        <section id="story" className="relative z-10 bg-pink-50/50">
+        <section 
+          ref={storyRef}
+          id="story" 
+          className="relative z-10 bg-pink-50/50 scroll-fade-up"
+        >
           <BrandStory />
         </section>
 
-        <section id="method" className="py-32 bg-white/30">
+        <section 
+          ref={methodRef}
+          id="method" 
+          className="py-32 bg-white/30 scroll-fade-up delay-100"
+        >
           <MethodGrid />
         </section>
 
-        <section id="experience" className="py-32 bg-pink-50/50">
+        <section 
+          ref={experienceRef}
+          id="experience" 
+          className="py-32 bg-pink-50/50 scroll-fade-up delay-200"
+        >
           <FukuokaExperience />
         </section>
 
-        <section id="archives" className="bg-white">
+        <section 
+          ref={archivesRef}
+          id="archives" 
+          className="bg-white scroll-fade-up delay-300"
+        >
           <ArchiveJournal />
         </section>
 
-        <section className="py-40">
+        <section 
+          ref={ctaRef}
+          className="py-40 scroll-fade-up delay-500"
+        >
           <LineCtaSection />
         </section>
       </main>
 
-      <SiteFooter />
+      <SiteFooter ref={footerRef} />
 
       {/* Floating LINE Button */}
       <a 

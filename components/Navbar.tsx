@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
             Premium Atelier
           </span>
           <h1 className="text-lg font-black tracking-tighter" style={{ color: scrolled ? COLORS.primary : 'white' }}>
-            {BRAND.name} <span className="font-light opacity-50 ml-1">FUKUOKA</span>
+            二の腕痩せ専門ジプソフィル®︎<span className="font-light opacity-50 ml-1">FUKUOKA</span>
           </h1>
         </div>
 
