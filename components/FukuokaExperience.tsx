@@ -60,23 +60,61 @@ const FukuokaExperience: React.FC = () => {
         <h3 className="serif-title text-2xl md:text-5xl font-bold leading-snug mb-8 md:mb-0">
           同じ悩みを抱えた<br />私だから、伝えたい。
         </h3>
-        <div className="space-y-6 md:space-y-6 text-sm md:text-lg leading-relaxed md:leading-[2.2] text-gray-700 text-center px-4 md:px-0">
-          <p>
-            はじめまして。emi（エミ）と申します。<br />
-            私は3人の子供を育てるシングルマザーです。一人で子育てを頑張ると覚悟を決めた時、子供はまだ小さく、フルタイムのパートで精いっぱいでした。収入は14万円。自分のために割く時間も、美容にかけるお金もありませんでした。
-          </p>
-          <p className="text-[#8c6a60] font-bold">
-            それでも、たくさんのことを学び、やりたいことを見つけていきました。
-          </p>
-          <p>
-            子育てが落ち着き、久しぶりに見た写真や鏡に写る自分の姿。そこに映っていたのは、太い二の腕でした。筋トレをしても変わらず、ノースリーブが似合わず、本当に着たい服が着られない。ずっとコンプレックスでした。
-          </p>
-          <p className="text-[#8c6a60] font-bold">
-            そんな私が、Yukiko代表の技術に出会い、感動と希望を手にしました。
-          </p>
-          <p>
-            同じ悩みを抱えた私だからこそ、あなたの気持ちに寄り添い、本当の変化を一緒に実現したい。それが、私の使命です。
-          </p>
+        <div className="space-y-4 md:space-y-6 text-sm md:text-lg leading-relaxed md:leading-[2.2] text-gray-700 text-center px-4 md:px-0">
+          <div className="md:hidden">
+            <p className="mb-4 font-medium">
+              はじめまして。emi（エミ）と申します。
+            </p>
+            <p className="mb-4 font-medium">
+              私は3人の子供を育てるシングルマザーです。<br />
+              一人で子育てを頑張ると覚悟を決めた時、<br />
+              子供はまだ小さく、フルタイムのパートで<br />
+              精いっぱいでした。
+            </p>
+            <p className="mb-4 font-medium">
+              収入は14万円。自分のために割く時間も、<br />
+              美容にかけるお金もありませんでした。
+            </p>
+            <p className="text-[#8c6a60] font-bold mb-4">
+              それでも、たくさんのことを学び、<br />
+              やりたいことを見つけていきました。
+            </p>
+            <p className="mb-4 font-medium">
+              子育てが落ち着き、久しぶりに見た写真や鏡に<br />
+              写る自分の姿。そこに映っていたのは、<br />
+              太い二の腕でした。筋トレをしても変わらず、<br />
+              ノースリーブが似合わず、本当に着たい服が着られない。<br />
+              ずっとコンプレックスでした。
+            </p>
+            <p className="text-[#8c6a60] font-bold mb-4">
+              そんな私が、Yukiko代表の技術に出会い、<br />
+              感動と希望を手にしました。
+            </p>
+            <p className="font-medium">
+              同じ悩みを抱えた私だからこそ、<br />
+              あなたの気持ちに寄り添い、本当の変化を<br />
+              一緒に実現したい。<br />
+              それが、私の使命です。
+            </p>
+          </div>
+          <div className="hidden md:block">
+            <p>
+              はじめまして。emi（エミ）と申します。<br />
+              私は3人の子供を育てるシングルマザーです。一人で子育てを頑張ると覚悟を決めた時、子供はまだ小さく、フルタイムのパートで精いっぱいでした。収入は14万円。自分のために割く時間も、美容にかけるお金もありませんでした。
+            </p>
+            <p className="text-[#8c6a60] font-bold">
+              それでも、たくさんのことを学び、やりたいことを見つけていきました。
+            </p>
+            <p>
+              子育てが落ち着き、久しぶりに見た写真や鏡に写る自分の姿。そこに映っていたのは、太い二の腕でした。筋トレをしても変わらず、ノースリーブが似合わず、本当に着たい服が着られない。ずっとコンプレックスでした。
+            </p>
+            <p className="text-[#8c6a60] font-bold">
+              そんな私が、Yukiko代表の技術に出会い、感動と希望を手にしました。
+            </p>
+            <p>
+              同じ悩みを抱えた私だからこそ、あなたの気持ちに寄り添い、本当の変化を一緒に実現したい。それが、私の使命です。
+            </p>
+          </div>
         </div>
         <div className="pt-8 flex items-center justify-center md:justify-start gap-4">
           <div className="w-16 h-px bg-[#c5a059]"></div>
