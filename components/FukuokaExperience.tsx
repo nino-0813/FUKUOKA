@@ -53,12 +53,14 @@ const FukuokaExperience: React.FC = () => {
         </div>
       </div>
       
-      <div className="order-1 md:order-2 space-y-8">
-        <SectionTag text="Owner's Story" />
-        <h3 className="serif-title text-3xl md:text-5xl font-bold leading-snug">
+      <div className="order-1 md:order-2 space-y-8 text-center md:text-left">
+        <div className="flex justify-center md:justify-start">
+          <SectionTag text="Owner's Story" />
+        </div>
+        <h3 className="serif-title text-2xl md:text-5xl font-bold leading-snug mb-8 md:mb-0">
           同じ悩みを抱えた<br />私だから、伝えたい。
         </h3>
-        <div className="space-y-6 text-lg leading-[2.2] text-gray-700">
+        <div className="space-y-6 md:space-y-6 text-sm md:text-lg leading-relaxed md:leading-[2.2] text-gray-700 text-center px-4 md:px-0">
           <p>
             はじめまして。emi（エミ）と申します。<br />
             私は3人の子供を育てるシングルマザーです。一人で子育てを頑張ると覚悟を決めた時、子供はまだ小さく、フルタイムのパートで精いっぱいでした。収入は14万円。自分のために割く時間も、美容にかけるお金もありませんでした。
@@ -76,7 +78,7 @@ const FukuokaExperience: React.FC = () => {
             同じ悩みを抱えた私だからこそ、あなたの気持ちに寄り添い、本当の変化を一緒に実現したい。それが、私の使命です。
           </p>
         </div>
-        <div className="pt-8 flex items-center gap-4">
+        <div className="pt-8 flex items-center justify-center md:justify-start gap-4">
           <div className="w-16 h-px bg-[#c5a059]"></div>
           <p className="text-sm font-bold text-[#8c6a60] tracking-widest">emi</p>
         </div>

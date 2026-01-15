@@ -71,7 +71,7 @@ const App: React.FC = () => {
         <section 
           ref={methodRef}
           id="method" 
-          className="py-32 bg-white/30 scroll-fade-up delay-100"
+          className="pt-0 pb-8 md:pb-32 bg-white/30 scroll-fade-up delay-100"
         >
           <MethodGrid />
         </section>
@@ -79,7 +79,7 @@ const App: React.FC = () => {
         <section 
           ref={experienceRef}
           id="experience" 
-          className="py-32 bg-pink-50/50 scroll-fade-up delay-200"
+          className="pt-8 md:pt-32 pb-32 bg-pink-50/50 scroll-fade-up delay-200"
         >
           <FukuokaExperience />
         </section>
@@ -105,7 +105,7 @@ const App: React.FC = () => {
       {/* Floating LINE Button */}
       <a 
         href="https://lin.ee/Js14Alx"
-        className="fixed bottom-8 right-8 z-[100] group flex items-center gap-4 bg-white p-2 pr-6 rounded-full shadow-2xl hover:-translate-y-1 transition-all"
+        className="hidden md:flex fixed bottom-8 right-8 z-[100] group items-center gap-4 bg-white p-2 pr-6 rounded-full shadow-2xl hover:-translate-y-1 transition-all"
       >
         <div className="w-12 h-12 bg-[#06C755] rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
           <svg className="w-7 h-7" viewBox="0 0 24 24" fill="white">

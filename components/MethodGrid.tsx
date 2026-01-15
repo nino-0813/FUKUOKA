@@ -5,19 +5,19 @@ import { COLORS, SectionTag } from '../constants';
 const METHODS = [
   {
     num: '01',
-    title: 'Sculpting',
+    title: '変化の実感',
     desc: '鏡に映る自分が、日々変わっていく。その変化を、あなた自身が実感できる瞬間を。',
     img: '/images/スクリーンショット 2026-01-15 22.52.29.png'
   },
   {
     num: '02',
-    title: 'Education',
+    title: '根本改善',
     desc: 'なぜ太くなったのか？その根本原因を知り、リバウンドのない身体へと導きます。',
     img: '/images/スクリーンショット 2026-01-15 22.52.44.png'
   },
   {
     num: '03',
-    title: 'Self-Care',
+    title: '継続の方法',
     desc: 'サロンの感動を日常に。自宅で「自分で自分をデザインする」術をお伝えします。',
     img: '/images/スクリーンショット 2026-01-15 22.52.56.png'
   }
@@ -55,9 +55,9 @@ const MethodGrid: React.FC = () => {
 
   return (
     <div className="container mx-auto px-8">
-      <div className="mb-20 text-center">
+      <div className="mb-12 md:mb-20 text-center">
         <SectionTag text="The Method" />
-        <h3 className="text-3xl md:text-5xl font-serif font-bold">最短で、最大の変化を。</h3>
+        <h3 className="text-2xl md:text-5xl font-serif font-bold text-center">最短で、最大の変化を。</h3>
       </div>
 
       <div className="grid md:grid-cols-3 gap-16">
