@@ -14,9 +14,8 @@ const ArchiveJournal: React.FC = () => {
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
         <div>
           <SectionTag text="The Archives" />
-          <h3 className="text-3xl md:text-5xl font-serif font-bold">積み重ねた信頼の記録。</h3>
+          <h3 className="text-3xl md:text-5xl font-serif font-bold">View All News</h3>
         </div>
-        <p className="text-xs tracking-widest font-bold opacity-40 uppercase">View All News</p>
       </div>
 
       <div className="space-y-0">

@@ -5,7 +5,7 @@ import { COLORS, SectionTag } from '../constants';
 const LineCtaSection: React.FC = () => {
   return (
     <div className="container mx-auto px-6">
-      <div className="max-w-5xl mx-auto bg-pink-50 rounded-[4rem] overflow-hidden shadow-2xl flex flex-col md:flex-row">
+      <div className="max-w-5xl mx-auto bg-pink-50 rounded-[4rem] overflow-hidden shadow-2xl border border-pink-100 flex flex-col md:flex-row">
         {/* Left: Visual */}
         <div className="md:w-1/2 relative h-64 md:h-auto">
           <img 
@@ -22,7 +22,7 @@ const LineCtaSection: React.FC = () => {
         </div>
 
         {/* Right: CTA */}
-        <div className="md:w-1/2 p-12 md:p-20 flex flex-col justify-center" style={{ color: COLORS.text }}>
+        <div className="md:w-1/2 p-12 md:p-20 flex flex-col justify-center bg-pink-50" style={{ color: COLORS.text }}>
           <SectionTag text="Call to Action" />
           <h3 className="text-3xl md:text-5xl font-serif font-bold mb-8 leading-tight">
             その迷いを、<br />

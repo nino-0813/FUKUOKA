@@ -1,45 +1,84 @@
 
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { COLORS, SectionTag } from '../constants';
 
 const FukuokaExperience: React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const imgRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => {
+      if (imgRef.current) {
+        observer.unobserve(imgRef.current);
+      }
+    };
+  }, []);
+
   return (
     <div className="container mx-auto px-8 grid md:grid-cols-2 gap-24 items-center">
       <div className="order-2 md:order-1 relative">
-        <div className="aspect-[4/5] bg-gray-200 overflow-hidden rounded-tr-[5rem] rounded-bl-[5rem] shadow-2xl">
+        <div 
+          ref={imgRef}
+          className="aspect-[4/5] bg-gray-200 overflow-hidden rounded-tr-[5rem] rounded-bl-[5rem] shadow-2xl"
+        >
           <img 
-            src="https://ninoude-design.jp/wp-content/uploads/2023/12/topprofile.png" 
-            className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
-            alt="Fukuoka Studio"
+            src="/images/4932433C-D1C2-4AD4-B8FF-F026644FBC1A.png" 
+            className={`w-full h-full object-cover transition-all duration-1000 ${
+              isVisible ? 'grayscale-0' : 'grayscale'
+            }`}
+            alt="Owner emi"
           />
         </div>
-        <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-[#c5a059] flex items-center justify-center p-8 rounded-full border-8 border-[#f9f6f2] hidden lg:flex">
-          <p className="text-white text-[10px] font-bold tracking-[0.2em] text-center leading-relaxed">
-            EXPERIENCE THE<br />HIGHEST QUALITY<br />SCULPTING IN FUKUOKA
-          </p>
+        <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-white flex items-center justify-center p-3 rounded-full border-8 border-[#f9f6f2] shadow-2xl hidden lg:flex overflow-hidden">
+          <img 
+            src="/images/diploma.png" 
+            className="w-full h-full object-contain rounded-full"
+            alt="Diploma Certificate"
+          />
         </div>
       </div>
       
       <div className="order-1 md:order-2 space-y-8">
-        <SectionTag text="Fukuoka Experience" />
-        <h3 className="text-4xl md:text-6xl font-serif font-bold leading-tight">
-          天神の喧騒を離れ、<br />自分と向き合う静寂を。
+        <SectionTag text="Owner's Story" />
+        <h3 className="serif-title text-3xl md:text-5xl font-bold leading-snug">
+          同じ悩みを抱えた<br />私だから、伝えたい。
         </h3>
-        <p className="text-lg text-gray-500 leading-[2.2] font-medium">
-          福岡店は、ただの施術場所ではありません。<br />
-          日常の重荷を下ろし、本来のあなたへと戻るための「聖域」です。<br />
-          熟練のデザイナーが、あなたの呼吸に合わせて<br className="hidden md:block" />
-          最適なプログラムをその場で紡ぎ出します。
-        </p>
-        <div className="pt-8 flex gap-12">
-          <div>
-            <p className="text-3xl font-serif font-bold">100%</p>
-            <p className="text-[10px] uppercase font-bold text-gray-400">Personalized</p>
-          </div>
-          <div>
-            <p className="text-3xl font-serif font-bold">Privileged</p>
-            <p className="text-[10px] uppercase font-bold text-gray-400">Private Suite</p>
-          </div>
+        <div className="space-y-6 text-lg leading-[2.2] text-gray-700">
+          <p>
+            はじめまして。emi（エミ）と申します。<br />
+            私は3人の子供を育てるシングルマザーです。一人で子育てを頑張ると覚悟を決めた時、子供はまだ小さく、フルタイムのパートで精いっぱいでした。収入は14万円。自分のために割く時間も、美容にかけるお金もありませんでした。
+          </p>
+          <p className="text-[#8c6a60] font-bold">
+            それでも、たくさんのことを学び、やりたいことを見つけていきました。
+          </p>
+          <p>
+            子育てが落ち着き、久しぶりに見た写真や鏡に写る自分の姿。そこに映っていたのは、太い二の腕でした。筋トレをしても変わらず、ノースリーブが似合わず、本当に着たい服が着られない。ずっとコンプレックスでした。
+          </p>
+          <p className="text-[#8c6a60] font-bold">
+            そんな私が、Yukiko代表の技術に出会い、感動と希望を手にしました。
+          </p>
+          <p>
+            同じ悩みを抱えた私だからこそ、あなたの気持ちに寄り添い、本当の変化を一緒に実現したい。それが、私の使命です。
+          </p>
+        </div>
+        <div className="pt-8 flex items-center gap-4">
+          <div className="w-16 h-px bg-[#c5a059]"></div>
+          <p className="text-sm font-bold text-[#8c6a60] tracking-widest">emi</p>
         </div>
       </div>
     </div>
