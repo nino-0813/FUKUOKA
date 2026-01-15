@@ -20,7 +20,7 @@ const LineConversion: React.FC = () => {
           
           <div className="space-y-6">
             <a 
-              href="https://lstep.app/JPUtt7Q" 
+              href="https://lin.ee/Js14Alx" 
               className="inline-flex items-center gap-4 bg-[#06C755] text-white px-16 py-7 rounded-full text-2xl font-black shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
             >
               LINEで無料相談・予約

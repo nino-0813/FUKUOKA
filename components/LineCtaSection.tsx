@@ -7,18 +7,14 @@ const LineCtaSection: React.FC = () => {
     <div className="container mx-auto px-6">
       <div className="max-w-5xl mx-auto bg-pink-50 rounded-[4rem] overflow-hidden shadow-2xl border border-pink-100 flex flex-col md:flex-row">
         {/* Left: Visual */}
-        <div className="md:w-1/2 relative h-64 md:h-auto">
+        <div className="md:w-1/2 relative h-64 md:h-auto bg-pink-50">
           <img 
-            src="https://ninoude-design.jp/wp-content/uploads/2024/01/二の腕デザインバナー1SP.jpg" 
-            className="absolute inset-0 w-full h-full object-cover brightness-75"
+            src="/images/スクリーンショット 2026-01-15 23.13.29.png" 
+            className="absolute inset-0 w-full h-full object-contain"
+            style={{ imageRendering: 'high-quality' }}
             alt="CTA Visual"
+            loading="eager"
           />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-white">
-              <p className="text-[10px] tracking-[0.5em] font-bold opacity-60 mb-2">LIMITED RESERVATION</p>
-              <p className="text-xl font-serif">福岡店・今月の空き僅か</p>
-            </div>
-          </div>
         </div>
 
         {/* Right: CTA */}
@@ -35,15 +31,12 @@ const LineCtaSection: React.FC = () => {
           </p>
 
           <a 
-            href="https://lstep.app/JPUtt7Q"
+            href="https://lin.ee/Js14Alx"
             className="shiny-btn flex items-center justify-between bg-gradient-to-r from-[#06C755] to-[#05b34d] hover:to-[#04a044] text-white transition-all duration-500 px-8 py-6 rounded-2xl group shadow-xl hover:shadow-2xl hover:-translate-y-1"
           >
-            <div className="flex items-center gap-4">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" className="w-8 h-8 brightness-0 invert" alt="LINE" />
-              <div className="text-left">
-                <p className="font-english text-[10px] font-bold opacity-90 uppercase tracking-widest mb-1">Reserve on LINE</p>
-                <p className="text-lg font-black tracking-wide">LINEで無料相談・予約</p>
-              </div>
+            <div className="text-left">
+              <p className="font-english text-[10px] font-bold opacity-90 uppercase tracking-widest mb-1">Reserve on LINE</p>
+              <p className="text-lg font-black tracking-wide">LINEで無料AI診断<br />無料相談</p>
             </div>
             <div className="bg-white/20 p-2 rounded-full group-hover:bg-white/30 transition-colors">
               <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">

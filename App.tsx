@@ -52,7 +52,7 @@ const App: React.FC = () => {
 
       {/* Floating LINE Button */}
       <a 
-        href="https://lstep.app/JPUtt7Q"
+        href="https://lin.ee/Js14Alx"
         className="fixed bottom-8 right-8 z-[100] group flex items-center gap-4 bg-white p-2 pr-6 rounded-full shadow-2xl hover:-translate-y-1 transition-all"
       >
         <div className="w-12 h-12 bg-[#06C755] rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">

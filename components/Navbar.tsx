@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a 
-            href="https://lstep.app/JPUtt7Q"
+            href="https://lin.ee/Js14Alx"
             className={`px-8 py-3 rounded-full text-[10px] uppercase tracking-widest font-black transition-all ${scrolled ? 'bg-[#2d1b1a] text-white hover:bg-[#8c6a60]' : 'bg-white text-[#2d1b1a] hover:bg-white/80'}`}
           >
             Booking

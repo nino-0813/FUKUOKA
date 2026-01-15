@@ -17,10 +17,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 text-center text-white px-4">
-        <p className="font-english text-sm tracking-[0.4em] uppercase font-semibold mb-8 animate-fade-in-up opacity-0">
-          Exclusive Body Sculpting Atelier
-        </p>
+      <div className="relative z-10 text-center text-white px-4 pt-16 md:pt-24">
         <h1 className="serif-title text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-10 tracking-wider animate-fade-in-up delay-200 opacity-0 drop-shadow-lg">
           美しさは、<br />
           削り出せる。
