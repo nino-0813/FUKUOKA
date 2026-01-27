@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import BrandStory from './components/BrandStory';
@@ -114,7 +113,6 @@ const App: React.FC = () => {
         </div>
         <span className="text-sm font-bold tracking-tight">福岡店で美腕を手に入れる</span>
       </a>
-      <Analytics />
     </div>
   );
 };
