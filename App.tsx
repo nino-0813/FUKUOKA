@@ -114,7 +114,6 @@ const App: React.FC = () => {
         </div>
         <span className="text-sm font-bold tracking-tight">福岡店で美腕を手に入れる</span>
       </a>
-
       <Analytics />
     </div>
   );
