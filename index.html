@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>二の腕痩せ専門サロン　二の腕デザイン®︎ 福岡店</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Serif+JP:wght@300;400;600&family=Zen+Old+Mincho:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-main: #8c6a60;
+      --color-accent: #c5a059;
+      --color-bg: #f9f6f2;
+      --color-text: #2a2422;
+    }
+    body {
+      font-family: "Zen Old Mincho", "Noto Serif JP", serif;
+      color: var(--color-text);
+      background-color: var(--color-bg);
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    * {
+      transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .font-english {
+      font-family: "Cormorant Garamond", serif;
+    }
+    .serif-title {
+      font-family: "Zen Old Mincho", serif;
+      letter-spacing: 0.15em;
+    }
+    .shiny-btn {
+      position: relative;
+      overflow: hidden;
+    }
+    .shiny-btn::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        to bottom right,
+        rgba(255,255,255,0) 0%,
+        rgba(255,255,255,0) 40%,
+        rgba(255,255,255,0.4) 50%,
+        rgba(255,255,255,0) 60%,
+        rgba(255,255,255,0) 100%
+      );
+      transform: rotate(45deg);
+      animation: shiny 6s infinite;
+    }
+    @keyframes shiny {
+      0% { transform: translateX(-100%) rotate(45deg); }
+      20% { transform: translateX(100%) rotate(45deg); }
+      100% { transform: translateX(100%) rotate(45deg); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideInLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes slideInRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes scaleIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .animate-fade-in-up {
+      animation: fadeInUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .animate-fade-in {
+      animation: fadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .animate-slide-in-left {
+      animation: slideInLeft 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .animate-slide-in-right {
+      animation: slideInRight 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .animate-scale-in {
+      animation: scaleIn 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .scroll-animate {
+      opacity: 0;
+      transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .scroll-animate.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .scroll-fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1), transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .scroll-fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .delay-100 { animation-delay: 0.1s; transition-delay: 0.1s; }
+    .delay-200 { animation-delay: 0.2s; transition-delay: 0.2s; }
+    .delay-300 { animation-delay: 0.3s; transition-delay: 0.3s; }
+    .delay-500 { animation-delay: 0.5s; transition-delay: 0.5s; }
+    
+    .vertical-rl {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<script async src="//www.instagram.com/embed.js"></script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
